@@ -84,7 +84,7 @@ function checkRoundWinner(playerPick, computerPick) {
 				
 	var winnerIs = 'player';
 
-	if (playerPick == computerPick) {
+	if (playerPick === computerPick) {
 		winnerIs = 'none';
 	} else if (
 		(computerPick == 'rock' &&  playerPick == 'scissors') ||
@@ -104,11 +104,11 @@ function checkRoundWinner(playerPick, computerPick) {
 	endGame();	
 			
 	function endGame(){
-		if (player.score == 10) {
+		if (player.score === 10) {
 			alert("Congratulations! You won! :)");
 			gameState='ended';
 			setGameElements();
-		} else if (computer.score == 10) {
+		} else if (computer.score === 10) {
 			alert("Computer won! Try again! :(");
 			gameState='ended';
 			setGameElements();
